@@ -5,20 +5,38 @@
 
 \usepackage[english]{babel}
 
-\title{This Document Title}
-\fullname{FirstName}{LastName}{Degree}
-\cvtitle{This is my CV Title}
-\website{https://www.example.com}{www.example.com}
-\email{email@example.com}
-\github{https://github.com/ghost}{GitHub}
-\linkedin{https://www.linkedin.com/in/username}{LinkedIn}
-\currentdate{DD Month YYYY}
+\usepackage{xparse}
+
+\ExplSyntaxOn
+
+\NewDocumentCommand{\getenv}{om}
+ {
+  \sys_get_shell:nnN { kpsewhich ~ --var-value ~ #2 } { } \l_tmpa_tl
+  \tl_trim_spaces:N \l_tmpa_tl
+  \IfNoValueTF { #1 }
+   {
+    \tl_use:N \l_tmpa_tl
+   }
+   {
+    \tl_set_eq:NN #1 \l_tmpa_tl
+   }
+ }
+
+\ExplSyntaxOff
+\getenv[\EMAIL]{EMAIL}
+
+\title{Dan Zimmerman's CV}
+\fullname{Dan}{Zimmerman}{MS}
+\cvtitle{}
+\website{https://danz.im}{danz.im}
+\email{\EMAIL}
+\github{https://github.com/danzimm}{danzimm}
+\linkedin{https://www.linkedin.com/in/danzimm}{danzimm}
+\currentdate{24 Nov 2025}
 
 \begin{document}
 
-These are some details about me.
-
-\section{Section 1}
+\section{Industry}
 
 \combosection{Subsection 1.a}{Small Description}{MM YYYY-Present}{This is description for subsection 1.a.\vspace{\topsep}
 \begin{tightlist}
@@ -33,9 +51,7 @@ These are some details about me.
 
 \vspace{\topsep}
 
-\section{Section 2}
-
-hi
+\section{Education}
 
 \combosection{Subsection 2.a}{Small Description}{MM YYYY-Present}{}
 
@@ -46,5 +62,13 @@ hi
 \vspace{\topsep}
 
 \combosection{Subsection 2.c}{}{}{}
+
+\section{Research}
+
+\section{Awards \& Distinctions}
+
+\section{Technical Skills}
+
+\section{Other Interests}
 
 \end{document}
