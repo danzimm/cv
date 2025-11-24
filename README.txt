@@ -1,0 +1,1 @@
+If you're on a mac, tried to compile this and got an error about FontAwesome not found run `kpsewhich FontAwesome.otf` to find the font file, then install that font manually (via opening it in FontBook).
