@@ -44,7 +44,7 @@
 \definecolor{gray}{HTML}{555555} % color gray
 \definecolor{lightgray}{HTML}{999999} % color light gray, a shade of gray
 \definecolor{black}{HTML}{000000} % color black, also gray just deeper
-\definecolor{coralpink}{HTML}{FF706C} % color coral pink, ever seen a real coral, huh 
+\definecolor{coralpink}{HTML}{36762A} % color coral pink, ever seen a real coral, huh 
 
 % provide colors to your elements
 \colorlet{defaulttext}{black} % default text color
@@ -67,6 +67,11 @@
     BoldItalicFont=Roboto-BoldItalic.ttf,
     Color=regulartext
 ]{Roboto-Light.ttf}
+
+\newfontfamily\italic[
+  Path = fonts/,
+  Color=regulartext
+]{Roboto-LightItalic.ttf}
 
 \newfontfamily\regular[
     Path = fonts/, 
@@ -129,18 +134,22 @@
     \fontsize{12pt}{12pt}\mediumheader\bfseries
 }{}{0pt}{}
 
+\newcommand{\combosectionsep}{\begingroup\Large\addfontfeatures{Color=linktext}{~|~}\endgroup}
+
 % new command for writing subsection and descriptions
 \newcommand{\combosection}[4]{
     \subsection{\textbf{#1}}
     \ifx&#2&
     \else
-    \Large\addfontfeatures{Color=linktext}{~|}
+    \combosectionsep
     \light\large{#2}
     \fi
-    \hfill{#3}
+    \hfill{\italic\normalsize#3}
     \linebreak
     \normalsize{#4}
 }
+
+\newcommand{\combosectionz}[6]{\combosection{#1{\light \combosectionsep #2}}{#3}{#4}{#5}}
 
 % header
 \AtBeginDocument{
@@ -192,7 +201,8 @@
 
         \ifdefined\comcv@title
         \ifx\comcv@title\empty
-            \large\light\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            %\large\light\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            \large\light\comcv@website~~\comcv@github~~\comcv@linkedin
             \vspace{-\topsep}
             \horbar
             \vspace{-\topsep}
@@ -201,11 +211,13 @@
             \vspace{-\topsep}
             \horbar
 
-            \comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            %\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            \comcv@website~~\comcv@github~~\comcv@linkedin
             \vspace{-\topsep}
         \fi
         \else
-            \large\light\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            %\large\light\comcv@email~~\comcv@website~~\comcv@github~~\comcv@linkedin
+            \large\light\comcv@website~~\comcv@github~~\comcv@linkedin
             \vspace{-\topsep}
             \horbar
             \vspace{-\topsep}
@@ -222,7 +234,8 @@
 \AtBeginDocument{
     \pagestyle{fancy}
     \fancyhead{}
-    \fancyfoot[C]{\footnotesize\light\comcv@firstname's Résumé, \comcv@date, \comcv@email} % footer text
+    %\fancyfoot[C]{\footnotesize\light\comcv@firstname's CV, \comcv@date, \comcv@email} % footer text
+    \fancyfoot[C]{\footnotesize\light Updated \comcv@date \; \comcv@email} % footer text
     \fancyfoot[R]{\raggedleft\footnotesize\comcv@page} % page number and page link
     \renewcommand{\headrulewidth}{0em}
     \setlength\footskip{\baselineskip}

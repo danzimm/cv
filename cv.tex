@@ -6,6 +6,7 @@
 \usepackage[english]{babel}
 
 \usepackage{xparse}
+\usepackage{amsfonts}
 
 \ExplSyntaxOn
 
@@ -32,43 +33,168 @@
 \email{\EMAIL}
 \github{https://github.com/danzimm}{danzimm}
 \linkedin{https://www.linkedin.com/in/danzimm}{danzimm}
-\currentdate{24 Nov 2025}
+\currentdate{\today}
 
 \begin{document}
 
-\section{Industry}
+\section{Education}
 
-\combosection{Subsection 1.a}{Small Description}{MM YYYY-Present}{This is description for subsection 1.a.\vspace{\topsep}
+\combosection{M.S. in Mathematics}{Loyola University Chicago}{Fall 2016 - Spring 2025}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {\regular Coursework}: {\italic Differential Geometry (Kreyszig; Lang; Guillemin \& Pollack); Functional Analysis (Bachman; MacCluer); Topology (Munkres; Willard; Hatcher); Real Analysis II (Rosenlicht; Rudin); Optimization (Guenin); Game Theory (Barron); \\ Automata \& Formal Languages (Sipser)}
+
+
+  \vspace{\topsep}
+}
+
+\combosection{B.S. in Theoretical Physics, Mathematics}{Loyola University Chicago}{Spring 2012 - Spring 2015}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {\regular Selected coursework}: {\italic Quantum Mechanics (Griffiths; Susskind); E\&M (Griffiths); Mechanics (Thornton \& Marion); PDEs (Brezis; Evans; Strauss); Complex Analysis (Saff \& Snider); Real Analysis I (Rudin; Apostol; Mattuck) }
+
+}
+
+
+\vspace{\topsep}
+
+\section{Research}
+
+\combosection{Asymptotic Limits of Nonlocal Curvature for Curves}{LUC (B. Seguin)}{2023 - Present}{
+  \begin{tightlist}
+    \item
+      Analyzing asymptotic limits of nonlocal curvature functionals for curves in $\mathbb{R}^n$, establishing convergence to classical curvature under appropriate scaling. Derived explicit asymptotics for circles and used geometric properties of canal surfaces to show that the nonlocal curvature of an arbitrary curve can be locally approximated by that of a circle.
+    \item
+      Presented at the AMS Sectional Meeting on Nonlocal Analysis and Geometric Measure Theory (Albany, 2024).
+    \item
+      {\italic Manuscript in preparation.}
+  \end{tightlist}
+}
+
+\combosection{Supernova Photometric Contamination Studies}{ANL (S. Kuhlmann, J. Cunningham)}{2013 - 2015}{
 \begin{tightlist}
-        \item itemA
-        \item itemB
-    \end{tightlist}
+\item
+  Investigated contamination of photometrically-selected Type Ia supernova samples by core-collapse supernovae using SNANA simulations and SALT2 parameter-space selection. Identified misclassified SNcc events and applied SNCosmo template-fitting to show that expanding the SNcc template set reduces false-Ia identifications by \~30\% per iteration.
+\item
+  Presented at NCUR (2014), CAURS (2015), and AAS 225 (2015).
+\end{tightlist}
 }
 
 \vspace{\topsep}
 
-\combosection{Subsection 1.b}{Small Description}{MM YYYY-MM YYYY}{\href{htps://www.example.com}{This is a link}}
-
-\vspace{\topsep}
-
-\section{Education}
-
-\combosection{Subsection 2.a}{Small Description}{MM YYYY-Present}{}
-
-\vspace{\topsep}
-
-\combosection{Subsection 2.b}{Small Description}{}{}
-
-\vspace{\topsep}
-
-\combosection{Subsection 2.c}{}{}{}
-
-\section{Research}
-
 \section{Awards \& Distinctions}
 
-\section{Technical Skills}
+\combosection{Father Gerst Memorial Award Excellence in Physics}{LUC}{2015}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Award established in 1965 in honor of Fr. Francis J. Gerst, S.J., former Chair of Mathematics and Dean of the Graduate School; presented to students in the physics program for {\regular outstanding academic excellence in physics}.}
 
-\section{Other Interests}
+}
+
+\vspace{\topsep}
+
+\combosection{Interdisciplinary Honors Program}{LUC}{2012 - 2015}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Completed Loyola’s Interdisciplinary Honors Program, a competitive, intensive curriculum emphasizing analytical and \\ communication skills, international and interdisciplinary perspectives, and high academic performance (including \\ additional honors coursework and GPA requirements).}
+
+}
+
+\vspace{\topsep}
+
+\combosection{IAS Undergraduate Summer School}{PCMI}{2014}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Competitively selected participant in the IAS/PCMI Undergraduate Summer School, an intensive program featuring \\ advanced mathematical lectures by leading researchers. The program culminated in my presentation on the Dirichlet \\ problem, explaining how minimization of the associated energy functional yields solutions to Poisson’s equation.}
+
+}
+
+\vspace{\topsep}
+
+\section{Industry}
+
+\vspace{2mm}
+
+\begin{center}
+  My work focuses on applying programming-language \& information-theoretic analysis to optimization problems.
+\end{center}
+
+\combosectionz{Meta}{Software Engineer}{AI Software Platform}{Jan 2024 - Present}{
+  %Worked on AI infrastructure with a focus on reliability, correctness and performance.
+  %\vspace{\topsep}
+  \begin{tightlist}
+    \item Scaled MI300 GPUs across Meta's fleet. Updated algorithms to run as efficiently and accurately as on Nvidia GPUs.
+    \item Updated internal fork of Triton GPU compiler. Fixed compiler bugs causing correctness and performance problems.
+    \item Improved performance of Triton code on MI300 GPUs by leveraging hardware specific features.
+    \item Fixed bugs and expanded Triton's frontend for easier GPU code authoring.
+  \end{tightlist}
+}
+
+%\vspace{\topsep}
+
+\combosectionz{Adyen}{Staff Software Engineer}{Mobile + POS Terminals}{May 2023 - Dec 2023}{
+  \begin{tightlist}
+    \item Founding engineer in Adyen’s first U.S. office; strengthened the site’s engineering influence.
+    \item Drove org-wide best practices, unified Mobile \& POS Terminals via shared APIs, and established strong product–engineering communication workflows.
+  \end{tightlist}
+}
+
+%\vspace{\topsep}
+
+\combosectionz{Spotify}{Senior Software Engineer}{iOS Performance}{Apr 2022 - Jan 2023}{
+  \begin{tightlist}
+    \item Enhanced iOS startup instrumentation and system-level diagnostics, improving observability and app reliability.
+    \item Developed Early Quality Tests to identify subtle and hard-to-detect performance regressions.
+  \end{tightlist}
+}
+
+\combosectionz{Snap}{Senior Software Engineer}{iOS Performance, CI Infrastructure}{May 2020 - Feb 2022}{
+  \begin{tightlist}
+    \item Built local and production performance instrumentation adopted by dozens of teams.
+    \item Improved app startup time by 5–10\% through targeted I/O optimizations.
+    \item Designed and implemented Python-based CI infrastructure to improve testing, reliability and debuggability.
+  \end{tightlist}
+}
+
+\combosectionz{Facebook}{Senior Software Engineer}{iOS + Android Performance}{May 2017 - May 2020}{
+  \begin{tightlist}
+    \item Conducted clustering and regression analyses to model performance behavior across large-scale systems.
+    \item Delivered 2–40\% CPU and I/O performance improvements in iOS JavaScript virtual machines.
+    \item Achieved a 5–10\% startup speedup via profiling-guided I/O optimizations.
+    \item Created Objective-C compiler optimizations cutting binary size by ~20\% and improving CPU by 7–9\%; fixed key Obj-C++ codegen defects (D41050, D59873).
+    \item Reduced Android binary sizes by 4–6\% through debug-info optimization in Redex.
+    \item Advanced AOSP on-device PGO, yielding 15\% binary size wins and 5–30\% CPU improvements.
+    \item Built an Android bytecode optimizer realizing 2–3\% startup gains.
+  \end{tightlist}
+}
+
+\combosectionz{Arity}{Application Developer}{iOS}{Jul 2016 - May 2017}{
+  \begin{tightlist}
+    \item Used PLT techniques to enable experimentation of algorithms in driving-behavior app used by tens of thousands of users.
+  \end{tightlist}
+}
+
+\combosectionz{StageBloc / Fullscreen}{Mobile Developer}{iOS}{Jul 2016 - May 2017}{
+  \begin{tightlist}
+    \item Built and maintained production iOS social, shopping, and SVOD applications serving thousands of users.
+  \end{tightlist}
+}
+
+\combosectionz{Google}{Software Engineer}{iOS}{Aug 2015 – Jan 2016}{
+  \begin{tightlist}
+    \item Implemented flight and sports cards for the iOS Google Now feature team, used by hundreds of thousands of users.
+  \end{tightlist}
+}
+
+\section{Beyond}
+
+\combosection{Tehnical Skills}{}{}{
+  \noindent\hangindent=1.5em\hangafter=1
+  Python (NumPy, SciPy, Matplotlib, PyTorch, Triton); C/C++; CUDA / GPU Programming; Parallel \& High Performance Computing; Linux; Git; Mathematica; \LaTeX; differential-geometric and variational analysis techniques; asymptotic and measure-theoretic methods.
+
+}
+
+  \vspace{\topsep}
+
+\combosection{Other Interests}{}{}{
+  \noindent\hangindent=1.5em\hangafter=1
+  CAD modeling and 3D printing; mechanical mechanisms; reading in neuroscience, philosophy, math, and physics; book club; puzzles; kickboxing; cycling; coffee brewing; contemporary art; science documentaries.
+
+}
 
 \end{document}
