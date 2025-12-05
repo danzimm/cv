@@ -1,1 +1,1 @@
-$pdflatex = 'xelatex --shell-escape %O %S';
+$pdflatex = 'xelatex --shell-escape -interaction=nonstopmode %O %S';

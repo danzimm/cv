@@ -4,9 +4,17 @@
 \documentclass[a4paper]{comcv}
 
 \usepackage[english]{babel}
+\usepackage{amsmath}
+\usepackage{amssymb}
 
 \usepackage{xparse}
 \usepackage{amsfonts}
+
+
+\tolerance=10000
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
 
 \ExplSyntaxOn
 
@@ -63,25 +71,66 @@
 \combosection{Asymptotic Limits of Nonlocal Curvature for Curves}{LUC (B. Seguin)}{2023 - Present}{
   \begin{tightlist}
     \item
-      Recovered classical curvature under appropriate asymptotics of nonlocal curvature for sufficiently regular curves in $\mathbb{R}^n$.
+      Recovered classical curvature under appropriate limit of nonlocal curvature for circles in $\mathbb{R}^n$.
     \item
-      Derived explicit asymptotics for circles and used geometric properties of canal surfaces to show that the nonlocal \\ curvature of an arbitrary curve can be locally approximated by that of a circle.
+      Investigating recovering classical curvature under similar limit for arbitrary, sufficiently regular curves in $\mathbb{R}^n$.
     \item
-      \href{https://github.com/danzimm/math/blob/main/ams_fall_2024/ams_fall_2024.pdf}{Presented} at the \href{https://www.ams.org/meetings/sectional/2317_program_ss16.html}{AMS Sectional Meeting} on Nonlocal Analysis and Geometric Measure Theory (Albany, 2024).
-    \item
-      {\italic \href{https://github.com/danzimm/math/blob/main/analysis/curvature.pdf}{Manuscript in preparation}.}
+      {\italic \href{https://github.com/danzimm/math/blob/main/analysis/curvature.pdf}{Work in progress manuscript}.}
   \end{tightlist}
 }
 
 \combosection{Supernova Photometric Contamination Studies}{ANL (S. Kuhlmann, J. Cunningham)}{2013 - 2015}{
 \begin{tightlist}
 \item
-  Reduced false-positive Type Ia identifications by \textasciitilde 30\%.
+  Reduced false-positive Type Ia identifications by approximately 50\% by leveraging novel statistical software (SNCosmo) which allowed us to more granularly classify lightcurves.
 \item
   Investigated contamination of photometrically-selected Type Ia supernova samples by core-collapse supernovae using SNANA simulations and SALT2 parameter-space selection. Identified misclassified SNcc events and applied SNCosmo template-fitting with various characteristic lightcurves (\href{https://github.com/danzimm/sim_typing/}{code}).
-\item
-  \href{https://github.com/danzimm/cv/blob/main/aas225.pdf}{Presented} at \href{https://www.cur.org/events-services/ncur/}{NCUR} (2014), \href{https://www.caurs.com}{CAURS} (2015), and \href{https://aas.org/sites/default/files/2020-01/AAS_225_Meeting_Program.pdf}{AAS 225} (2015).
 \end{tightlist}
+}
+
+\section{Presentations}
+
+\combosection{Computing the limit of the Nonlocal Curvature}{\href{https://www.ams.org/meetings/sectional/2317_program_ss16.html}{AMS Fall Eastern Sectional Meeting}}{2024}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {\href{https://github.com/danzimm/math/blob/main/ams_fall_2024/ams_fall_2024.pdf}{Oral presentation} exploring computing the limit of nonlocal curvature of curves in $\mathbb{R}^n$, discussing current results and the conjecture we're actively working on relating classical and nonlocal notions of curvature.}
+
+}
+\vspace{\topsep}
+
+\combosection{IODI: Instruction offset Debug Information}{Facebook}{2019}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Oral presentation on a \href{https://github.com/facebook/redex/blob/5dfb66d950d672908a3961d43a9e3473cac48353/libredex/IODIMetadata.h}{compiler optimization that compresses data}. Presentation demonstrated the source of low entropy, described how to increase entropy, contained reduction measurements and discussed the project plan from conception to implementation.}
+
+}
+
+\vspace{\topsep}
+
+\combosection{Quantum Turing Machines and Shor's Algorithm}{Loyola University of Chicago}{2016}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {\href{https://github.com/danzimm/cv/blob/main/QTM.key}{Final oral presentation} for Automata and Formal Languages course. The slides were paired with derivations on the board.}
+
+}
+
+\vspace{\topsep}
+
+\combosection{\phantom{Photometric Classification of Supernovae}}{\href{https://aas.org/sites/default/files/2020-01/AAS_225_Meeting_Program.pdf}{American Astronomical Society 225th Meeting}}{2015}{}
+\vspace{-1.2 \topsep}
+
+\combosection{Photometric Classification of Supernovae}{\href{https://www.caurs.com}{Chicago Area Undergraduate Research Symposium}}{2015}{}
+\vspace{-1.2 \topsep}
+
+\combosection{\phantom{Photometric Classification of Supernovae}}{\href{https://www.cur.org/events-services/ncur/}{National Conference on Undergraduate Research}}{2014}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {\href{https://github.com/danzimm/cv/blob/main/aas225.pdf}{Poster presentation} showing approximately 50\% total reduction of incorrect identification of Type Ia Supernovae light curves via using novel statistical software (SNCosmo) and introducing better cuts.}
+
+}
+
+\vspace{\topsep}
+
+\combosection{Dirichlet's principle}{\href{https://www.ias.edu/pcmi}{IAS Undergraduate Summer School at PCMI}}{2014}{
+  \noindent\hangindent=1.5em\hangafter=1
+  \href{https://github.com/danzimm/cv/blob/main/dirichlet.pdf}{Oral presentation} where it was shown that minimizing the Dirichlet energy $\int \lVert \nabla u \rVert^2 - fu$ and solving Poisson's equation ${-\Delta u = f}$ is equivalent.
+
 }
 
 \vspace{\topsep}
@@ -106,7 +155,31 @@
 
 \combosection{IAS Undergraduate Summer School}{PCMI}{2014}{
   \noindent\hangindent=1.5em\hangafter=1
-  {{\regular Competitively selected participant} in the \href{https://www.ias.edu/pcmi}{IAS/PCMI Undergraduate Summer School}, an intensive program featuring \\ advanced mathematical lectures by leading researchers. The program culminated in my presentation on the \href{https://github.com/danzimm/cv/blob/main/dirichlet.pdf}{Dirichlet \\ problem}, explaining how minimization of the associated energy functional yields solutions to Poisson’s equation.}
+  {{\regular Competitively selected participant} in the \href{https://www.ias.edu/pcmi}{IAS/PCMI Undergraduate Summer School}, an intensive program featuring \\ advanced mathematical lectures by leading researchers. The program culminated in the presentation mentioned above.}
+
+}
+
+\vspace{\topsep}
+
+\section{Applied Research in Industry}
+
+\combosection{Android Binary Size Investigations}{Facebook}{2019}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Identified low-entropy debug-information regions in Android binaries and demonstrated that compiler transformations could raise entropy and reduce size (\href{https://github.com/facebook/redex/blob/5dfb66d950d672908a3961d43a9e3473cac48353/libredex/IODIMetadata.h}{IODI}, see presentation above).}
+
+}
+
+\combosection{Javascript Startup Execution Analysis}{Facebook}{2018}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Characterized memory-constrained execution paths unique to mobile environments, localized inefficient regions and proposed entropy-increasing optimizations to reduce startup latency. Implemented optimizations (string interning) in \href{https://github.com/facebook/hermes}{Hermes Javascript Virtual Machine}}
+
+}
+
+\vspace{\topsep}
+
+\combosection{iOS Startup Execution Analysis}{Facebook}{2018}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Used performance profilers to trace memory-faulting patterns introduced by proprietary compiler optimizations. Research culminated in internal technical report detailing measurements of performance issues, proving the source of the slowdown was decreased entropy and included steps to reproduce the results.}
 
 }
 
@@ -190,7 +263,7 @@
 
 \combosection{Skills}{}{}{
   \noindent\hangindent=1.5em\hangafter=1
-  Python (NumPy, SciPy, Matplotlib, PyTorch, Triton); C/C++; CUDA / GPU Programming; Parallel \& High Performance \\ Computing; Linux; Git; Mathematica; \LaTeX; differential-geometric \& variational techniques; asymptotic and measure-theoretic methods.
+  Python (NumPy, SciPy, Matplotlib, PyTorch, Triton); C/C++; CUDA / GPU Programming; HPC profiling \& performance modeling; Mathematica; \LaTeX; differential-geometric \& variational techniques; asymptotic and measure-theoretic methods.
 
 }
 
@@ -198,7 +271,7 @@
 
 \combosection{Interests}{}{}{
   \noindent\hangindent=1.5em\hangafter=1
-  CAD modeling; 3D printing; mechanical mechanisms; neuroscience, philosophy, math, physics literature; kickboxing; rock climbing; coffee; contemporary art; documentaries; book club.
+  CAD modeling; 3D printing; mechanical mechanisms; neuroscience, philosophy, math, physics literature; kickboxing; rock climbing; coffee; contemporary art; book club.
 
 }
 
