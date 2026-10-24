@@ -1,4 +1,4 @@
-name: Deploy dzcv.pdf to GitHub Pages
+name: Deploy CV and resume to GitHub Pages
 
 on:
   push:
@@ -33,6 +33,7 @@ jobs:
           rm -rf _site
           mkdir _site
           cp cv.pdf _site/dzcv.pdf
+          cp resume.pdf _site/resume.pdf
           cp index.html _site/index.html
 
       - name: Upload Pages artifact
