@@ -1,0 +1,30 @@
+\section{Applied Research in Industry}
+
+\combosection{AMD GPU Compiler Optimization}{Meta}{2024 - Present}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Develop and benchmark LLVM heuristics for enabling \href{https://github.com/llvm/llvm-project/pull/221115}{branch padding} on AMD MI300/MI350 GPUs, using controlled experiments, \href{https://github.com/danzimm/buffer-inv-bench}{microbenchmarks}, and hardware-counter profiling to reduce unnecessary memory waits.}
+
+}
+\vspace{\topsep}
+
+\combosection{Android Binary Size Investigations}{Facebook}{2019}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Identified low-entropy regions in Android binaries, implemented compiler optimizations to reduce binary size (\href{https://github.com/facebook/redex/blob/5dfb66d950d672908a3961d43a9e3473cac48353/libredex/IODIMetadata.h}{IODI}).}
+
+}
+\vspace{\topsep}
+
+\combosection{Javascript Startup Execution Analysis}{Facebook}{2018}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Identified I/O inefficiencies due to metadata with low entropy, improved via string interning in \href{https://github.com/facebook/hermes}{Hermes}.}
+
+}
+\vspace{\topsep}
+
+\combosection{iOS Startup Execution Analysis}{Facebook}{2018}{
+  \noindent\hangindent=1.5em\hangafter=1
+  {Used profilers to trace and identify inefficient memory-faulting patterns. Research culminated in internal technical report detailing measurements, the source of the bad code from the compiler and including steps for reproduction.}
+
+}
+
+\vspace{\topsep}

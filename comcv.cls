@@ -16,6 +16,7 @@
 
 \newif\ifextended
 \extendedfalse
+\newif\ifacademiccv
 \DeclareOption{extended}{
     \extendedtrue
 }
@@ -29,13 +30,19 @@
 
 % required packages - put more packages here
 \RequirePackage[top=0.5cm,left=1cm,right=1cm,bottom=1.2cm]{geometry} % Change Horizontal and Vertical margins
+\RequirePackage{fontspec} % custom fonts
+\defaultfontfeatures[FontAwesome]{Extension=.otf} % load the bundled TeX font
 \RequirePackage{fontawesome} % fontawesome icons
 \RequirePackage[usenames,dvipsnames]{xcolor} % custom colors
-\RequirePackage{fontspec} % custom fonts
 \RequirePackage{array}
 \RequirePackage{totpages} % counts total pages
 \RequirePackage{fancyhdr} % fancy header, footer
 \RequirePackage{titlesec} % formating sections, subsections
+\RequirePackage[english]{babel}
+\RequirePackage{amsmath}
+\RequirePackage{amssymb}
+\RequirePackage{xparse}
+\RequirePackage{amsfonts}
 \RequirePackage{hyperref} % for links and, please keep it as last package, add more packages above it
 \PassOptionsToPackage{unicode}{hyperref}
 \PassOptionsToPackage{naturalnames}{hyperref}
@@ -149,7 +156,7 @@
     \normalsize{#4}
 }
 
-\newcommand{\combosectionz}[6]{\combosection{#1{\light \combosectionsep #2}}{#3}{#4}{#5}}
+\newcommand{\combosectionz}[5]{\combosection{#1{\light \combosectionsep #2}}{#3}{#4}{#5}}
 
 % header
 \AtBeginDocument{
@@ -250,3 +257,36 @@
 }{
     \end{itemize}
 }
+
+% shared document settings
+\tolerance=10000
+\emergencystretch=\maxdimen
+\hyphenpenalty=10000
+\exhyphenpenalty=10000
+
+\ExplSyntaxOn
+
+\NewDocumentCommand{\getenv}{om}
+ {
+  \sys_get_shell:nnN { kpsewhich ~ --var-value ~ #2 } { } \l_tmpa_tl
+  \tl_trim_spaces:N \l_tmpa_tl
+  \IfNoValueTF { #1 }
+   {
+    \tl_use:N \l_tmpa_tl
+   }
+   {
+    \tl_set_eq:NN #1 \l_tmpa_tl
+   }
+ }
+
+\ExplSyntaxOff
+\getenv[\EMAIL]{EMAIL}
+
+\title{Dan Zimmerman's CV}
+\fullname{Dan}{Zimmerman}{}
+\cvtitle{}
+\website{https://danz.im}{danz.im}
+\email{\EMAIL}
+\github{https://github.com/danzimm}{danzimm}
+\linkedin{https://www.linkedin.com/in/danzimm}{danzimm}
+\currentdate{\today}
